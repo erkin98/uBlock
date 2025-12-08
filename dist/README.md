@@ -79,25 +79,44 @@ Your uBlock Origin settings are preserved even after uninstalling the addon.
    git checkout master
    ```
 4. Build the plugin:
-   - Chromium: 
-     ```bash
-     make chromium
-     ```
-   - Firefox:
-     ```bash
-     make firefox
-     ```
+   - **Default (Manifest V3):**
+     - Chromium: 
+       ```bash
+       make mv3-chromium
+       ```
+     - Firefox:
+       ```bash
+       make mv3-firefox
+       ```
+   - **Legacy (Manifest V2):**
+     - Chromium: 
+       ```bash
+       make chromium
+       ```
+     - Firefox:
+       ```bash
+       make firefox
+       ```
    - NPM package:
      ```bash
      make npm
      ```
 5. Load the result of the build into your browser:
-   - **Chromium:**
+   - **Chromium (MV3):**
+     - Navigate to `chrome://extensions/`
+     - Check _"Developer mode"_
+     - Click _"Load unpacked"_
+     - Select `/uBlock/dist/build/uBOLite.chromium/`
+   - **Firefox (MV3):**
+     - Navigate to `about:debugging#/runtime/this-firefox`
+     - Click _"Load Temporary Add-on..."_ 
+     - Select `/uBlock/dist/build/uBOLite.firefox/`
+   - **Chromium (MV2 Legacy):**
      - Navigate to `chrome://extensions/`
      - Check _"Developer mode"_
      - Click _"Load unpacked"_
      - Select `/uBlock/dist/build/uBlock0.chromium/`
-   - **Firefox:**
+   - **Firefox (MV2 Legacy):**
      - Navigate to `about:debugging#/runtime/this-firefox`
      - Click _"Load Temporary Add-on..."_ 
      - Select `/uBlock/dist/build/uBlock0.firefox/`
