@@ -66,9 +66,9 @@ Your uBlock Origin settings are preserved even after uninstalling the addon.
 
 ## Build Instructions (for Developers)
 
-1. Clone the [uBlock repository](https://github.com/gorhill/uBlock):
+1. Clone the [uBlock repository](https://github.com/erkin98/uBlock):
    ```bash
-   git clone https://github.com/gorhill/uBlock.git
+   git clone https://github.com/erkin98/uBlock.git
    ```
 2. Set the path to uBlock:
    ```bash
