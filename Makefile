@@ -21,7 +21,7 @@ mv3-data := $(shell find ./dist/build/mv3-data -type f)
 mv3-edge-deps := $(wildcard platform/mv3/edge/*)
 mv3-safari-deps := $(wildcard platform/mv3/safari/*)
 
-all: chromium firefox npm
+all: mv3-chromium mv3-firefox npm
 
 dist/build/uBlock0.chromium: tools/make-chromium.sh $(sources) $(platform) $(assets)
 	tools/make-chromium.sh
